@@ -1,15 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using EspecialAlarm.Pages;
 using Xamarin.Forms;
 
-namespace EspecialAlarm {
-	public partial class MainPage : ContentPage {
-		public MainPage() {
+namespace EspecialAlarm
+{
+	public partial class MainPage : ContentPage
+	{
+		public MainPage()
+		{
 			InitializeComponent();
+		}
+
+		async private void OnAlarmClockButtonClicked(object sender, EventArgs e)
+		{
+			var addAlarmClockPage = new AlarmClockPage();
+			await Navigation.PushModalAsync(addAlarmClockPage);
 		}
 	}
 }
