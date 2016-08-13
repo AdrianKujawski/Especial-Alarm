@@ -18,7 +18,4 @@
 		<Button x:Name="StartPause" Grid.Row="1" Grid.Column="0" Text="Start" Clicked="ChangeState"/>
 		<Button x:Name="Stop" Grid.Row="1" Grid.Column="2"  Text="Stop" Clicked="StopState"/>
 	</Grid>
-	<!--<AbsoluteLayout>
-		<Label x:Name="label" FontSize="Large"  AbsoluteLayout.LayoutFlags="PositionProportional" />
-	</AbsoluteLayout>-->
 </ContentPage>
