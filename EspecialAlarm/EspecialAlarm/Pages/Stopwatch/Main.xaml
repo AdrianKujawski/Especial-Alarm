@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EspecialAlarm.Pages.Stopwatch.Main">
+	<Grid Padding="25,20,25,0">
+			<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>	
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		
+		<Label x:Name="TimerState" Grid.Row="0" Grid.Column="1" Text="00:00:00" FontSize="23" VerticalOptions="Center" HorizontalOptions="Center" />
+		<Button x:Name="StartPause" Grid.Row="1" Grid.Column="0" Text="Start" Clicked="ChangeState"/>
+		<Button x:Name="Stop" Grid.Row="1" Grid.Column="2"  Text="Stop" Clicked="StopState"/>
+	</Grid>
+	<!--<AbsoluteLayout>
+		<Label x:Name="label" FontSize="Large"  AbsoluteLayout.LayoutFlags="PositionProportional" />
+	</AbsoluteLayout>-->
+</ContentPage>
