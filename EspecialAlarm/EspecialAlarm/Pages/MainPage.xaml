@@ -6,7 +6,7 @@
 
 	<StackLayout Orientation="Vertical" Spacing="10" Padding="25,20,25,20">
 		<Button Text="Budzik" Clicked="OnAlarmClockButtonClicked" />
-		<Button Text="Stoper" />
+		<Button Text="Stoper" Clicked="GoToStopwatch" />
 		<Button Text="YouTube" />
 	</StackLayout>
 
