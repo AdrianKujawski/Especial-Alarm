@@ -30,18 +30,37 @@ namespace EspecialAlarm.Pages
 
 				foreach (var alarm in AlarmClocks.GetAlarmList())
 				{
-					var frame = new Frame
+					string alarmTimeText = alarm.ToString().Remove(5);
+
+					var frameContainer = new StackLayout
+					{
+						Orientation = StackOrientation.Horizontal
+					};
+
+					var frameLayout = new Frame()
 					{
 						BackgroundColor = Color.Accent,
 						VerticalOptions = LayoutOptions.StartAndExpand,
-						Content = new Label
-						{
-							VerticalOptions = LayoutOptions.Center,
-							HorizontalOptions = LayoutOptions.Start,
-							Text = alarm.ToString()
-						}
+						HorizontalOptions = LayoutOptions.FillAndExpand,
+						Content = frameContainer
 					};
-					alarmLayout.Children.Add(frame);
+
+					var alarmText = new Label
+					{
+						HorizontalOptions = LayoutOptions.StartAndExpand,
+						VerticalOptions = LayoutOptions.Center,
+						Text = alarmTimeText
+					};
+					frameContainer.Children.Add(alarmText);
+
+					var switcher = new Switch
+					{
+						HorizontalOptions = LayoutOptions.EndAndExpand,
+						VerticalOptions = LayoutOptions.Center,
+					};
+					frameContainer.Children.Add(switcher);
+
+					alarmLayout.Children.Add(frameLayout);
 				}
 
 				var scroll = new ScrollView
