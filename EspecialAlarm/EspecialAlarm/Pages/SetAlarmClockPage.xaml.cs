@@ -23,7 +23,7 @@ namespace EspecialAlarm.Pages
 
 		private async void OnDoneButtonClicked(object sender, EventArgs e)
 		{
-			CreateDateTime();
+			ConfirmNewAlarm();
 			await Navigation.PopModalAsync();
 		}
 
@@ -34,7 +34,7 @@ namespace EspecialAlarm.Pages
 			timePicker.Time = new TimeSpan(hh, mm, 0);
 		}
 
-		private void CreateDateTime()
+		private void ConfirmNewAlarm()
 		{
 			TimeSpan time = timePicker.Time;
 			Debug.WriteLine(time.ToString());
