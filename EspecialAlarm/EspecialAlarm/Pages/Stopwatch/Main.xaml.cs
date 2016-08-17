@@ -40,9 +40,9 @@ namespace EspecialAlarm.Pages.Stopwatch
 		{
 			while (true)
 			{
-				var secounds = _stopwatch.Elapsed.Seconds.ToString();
-				var minutes = _stopwatch.Elapsed.Minutes.ToString();
-				var hours = _stopwatch.Elapsed.Hours.ToString();
+				var secounds = _stopwatch.Elapsed.Seconds.ToString("00");
+				var minutes = _stopwatch.Elapsed.Minutes.ToString("00");
+				var hours = _stopwatch.Elapsed.Hours.ToString("00");
 				TimerState.Text = $"{hours}:{minutes}:{secounds}";
 				await Task.Delay(250);
 			}
