@@ -60,6 +60,7 @@ namespace EspecialAlarm.Pages
 		private void ConfirmEdit(TimeSpan alarm)
 		{
 			//TO DO
+			AlarmClocks.ReplaceItem(alarm, timePicker.Time);
 		}
 
 		private void CreateDoneButton()

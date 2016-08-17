@@ -22,7 +22,7 @@ namespace EspecialAlarm.Classes
 
 			StackLayout frameContainer = new StackLayout
 			{
-				Orientation = StackOrientation.Horizontal
+				Orientation = StackOrientation.Horizontal,
 			};
 
 			var alarmText = new Label {
@@ -42,7 +42,7 @@ namespace EspecialAlarm.Classes
 			var optionButton = new Button {
 				HorizontalOptions = LayoutOptions.End,
 				VerticalOptions = LayoutOptions.Center,
-				Text = "Options"
+				Text = "Options",
 			};
 			optionButton.Clicked += OnOptionButtonClicked;
 			frameContainer.Children.Add(optionButton);

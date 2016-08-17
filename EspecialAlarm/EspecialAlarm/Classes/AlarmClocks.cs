@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace EspecialAlarm.Classes
 {
@@ -12,10 +13,8 @@ namespace EspecialAlarm.Classes
 			if (_dateTimes == null)
 			{
 				_dateTimes = new List<TimeSpan>();
-				AddAlarmClock(new TimeSpan(17,32,00));
-				AddAlarmClock(new TimeSpan(6,30,00));
+				_dateTimes.Add(new TimeSpan(8,0,0));
 			}
-
 		}
 
 		public static void AddAlarmClock(TimeSpan time)
@@ -31,6 +30,13 @@ namespace EspecialAlarm.Classes
 		public static List<TimeSpan> GetAlarmList()
 		{
 			return _dateTimes;
+		}
+
+		public static void ReplaceItem(TimeSpan oldTime, TimeSpan newTime)
+		{
+			var matchTime = _dateTimes.FindIndex(p => p.Equals(oldTime));
+			_dateTimes.RemoveAt(matchTime);
+			_dateTimes.Insert(matchTime, newTime);
 		}
 
 	}
