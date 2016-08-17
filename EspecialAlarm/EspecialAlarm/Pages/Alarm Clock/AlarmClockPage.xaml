@@ -2,7 +2,6 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EspecialAlarm.Pages.AlarmClockPage">
-	<StackLayout x:Name="stack" Orientation="Vertical" Padding="25,20,25,0">
-	</StackLayout>
+             x:Class="EspecialAlarm.Pages.Alarm_Clock.AlarmClockPage">
+	<StackLayout x:Name="MainLayout" Orientation="Vertical" Padding="25,20,25,0" />
 </ContentPage>

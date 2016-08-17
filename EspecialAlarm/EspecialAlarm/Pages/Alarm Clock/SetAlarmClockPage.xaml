@@ -5,7 +5,7 @@
              xmlns:system="clr-namespace:System;assembly=System.Runtime"
              x:Class="EspecialAlarm.Pages.SetAlarmClockPage">
 
-	<Grid Padding="25,20,25,0">
+	<Grid x:Name="grid" Padding="25,20,25,0">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
@@ -15,8 +15,6 @@
 		</Grid.ColumnDefinitions>
 
 		<Button Text="Cancel" Grid.Row="0" Grid.Column="0" Clicked="OnCancelButtonClicked" />
-
-		<Button Text="Done" Grid.Row="0" Grid.Column="1" Clicked="OnDoneButtonClicked" />
 
 		<StackLayout Grid.Row="1" Grid.ColumnSpan="2">
 			<TimePicker x:Name="timePicker" VerticalOptions="Start" />

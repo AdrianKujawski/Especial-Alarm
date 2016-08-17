@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EspecialAlarm.Classes
 {
-	public static class AlarmClocks
+	public class AlarmClocks
 	{
 		private static List<TimeSpan> _dateTimes;
 
@@ -23,14 +23,15 @@ namespace EspecialAlarm.Classes
 			_dateTimes.Add(time);
 		}
 
-		public static void RemoveAlarmClock(int i)
+		public static void RemoveAlarmClock(TimeSpan checkedTime)
 		{
-			_dateTimes.RemoveAt(i);
+			_dateTimes.Remove(checkedTime);
 		}
 
 		public static List<TimeSpan> GetAlarmList()
 		{
 			return _dateTimes;
 		}
+
 	}
 }

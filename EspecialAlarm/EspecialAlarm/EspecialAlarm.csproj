@@ -37,13 +37,17 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Classes\AlarmClocks.cs" />
-    <Compile Include="Pages\AlarmClockPage.xaml.cs">
+    <Compile Include="Classes\AlarmFrame.cs" />
+    <Compile Include="Pages\Alarm Clock\AlarmClockPage.xaml.cs">
       <DependentUpon>AlarmClockPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Alarm Clock\EditAlarmPage.xaml.cs">
+      <DependentUpon>EditAlarmPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SetAlarmClockPage.xaml.cs">
+    <Compile Include="Pages\Alarm Clock\SetAlarmClockPage.xaml.cs">
       <DependentUpon>SetAlarmClockPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Stopwatch\Main.xaml.cs">
@@ -78,19 +82,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\AlarmClockPage.xaml">
+    <EmbeddedResource Include="Pages\Alarm Clock\AlarmClockPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\SetAlarmClockPage.xaml">
+    <EmbeddedResource Include="Pages\Alarm Clock\SetAlarmClockPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Stopwatch\Main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Alarm Clock\EditAlarmPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

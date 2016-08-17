@@ -2,6 +2,7 @@
 using EspecialAlarm.Pages;
 using EspecialAlarm.Pages.Stopwatch;
 using Xamarin.Forms;
+using AlarmClockPage = EspecialAlarm.Pages.Alarm_Clock.AlarmClockPage;
 
 namespace EspecialAlarm
 {
@@ -15,7 +16,7 @@ namespace EspecialAlarm
 		async private void OnAlarmClockButtonClicked(object sender, EventArgs e)
 		{
 			var addAlarmClockPage = new AlarmClockPage();
-			await Navigation.PushModalAsync(addAlarmClockPage);
+			await Navigation.PushAsync(addAlarmClockPage);
 		}
 
 		 async void GoToStopwatch(object sender, EventArgs e) {

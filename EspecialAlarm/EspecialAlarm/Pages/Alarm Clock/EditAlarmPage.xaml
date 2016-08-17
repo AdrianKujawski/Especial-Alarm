@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EspecialAlarm.Pages.Alarm_Clock.EditAlarmPage">
+	<StackLayout Orientation="Vertical" Spacing="10" Padding="25,20,25,20">
+		<Button Text="Edit" Clicked="OnEditButtonClicked" />
+		<Button Text="Delete" Clicked="OnDeleteButtonClicked" />
+	</StackLayout>
+</ContentPage>
